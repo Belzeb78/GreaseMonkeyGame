@@ -20,6 +20,11 @@ class Case{
        
 		
     }
+	
+    findByMatricule(matricule) {
+      console.log("search matricule");
+      return persos.find(item => item.value === matricule);
+    }
 
     draw(canvas, ctx){
         let me = this;
