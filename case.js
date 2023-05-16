@@ -7,7 +7,8 @@ class Case{
         this.setCouleur();
     }
 
-    setTooltipContent(){		
+    setTooltipContent(){
+	    	console.log(this.persos);
 		if (this.joueur != undefined && this.persos != undefined) {
 			console.log(findByMatricule(this.joueur.id));
 			var joueurTitle = "["+this.joueur.id+"]"+findByMatricule(this.joueur.id).label;
