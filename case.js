@@ -9,8 +9,8 @@ class Case{
 
     setTooltipContent(){
 		if (this.joueur != undefined && persos != undefined) {
-			console.log(findByMatricule());
-			var joueurTitle = "["+this.joueur.id+"]"+findByMatricule().label;
+			console.log(this.findByMatricule());
+			var joueurTitle = "["+this.joueur.id+"]"+this.findByMatricule().label;
 			$(canvas).attr('title', ).css('font-weight', 'bold');;
 		}else if(this.batiment != undefined){
 			$(canvas).attr('title', "Batiment: "+this.batiment.id).css('font-weight', 'bold');;
