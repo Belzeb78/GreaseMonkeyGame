@@ -22,9 +22,11 @@ class Case{
     }
 	
     findByMatricule() {
-      console.log("search matricule");
-      console.log(persos);
-      return persos.find(item => item.value === this.joueur.id);
+	    console.log("search matricule");
+	    console.log(persos);
+	    var pers = JSON.parse(JSON.stringify(persos));
+	    console.log(pers);
+	    return persos.find(item => item.value === this.joueur.id);
     }
 
     draw(canvas, ctx){
