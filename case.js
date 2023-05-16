@@ -23,7 +23,8 @@ class Case{
 	
     findByMatricule() {
       console.log("search matricule");
-      return persos.find(item => item.value === this.joueur.id);
+      var pers = persos;
+      return pers.find(item => item.value === this.joueur.id);
     }
 
     draw(canvas, ctx){
