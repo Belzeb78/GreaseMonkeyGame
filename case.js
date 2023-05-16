@@ -1,4 +1,4 @@
-
+//Perso
 class Case{
     couleur;
     couleur_brouillard;
