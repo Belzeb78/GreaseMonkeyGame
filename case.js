@@ -11,6 +11,8 @@ class Case{
 		console.log(this.joueur);
 		if (this.joueur != undefined) {			
 			$(canvas).attr('title', this.joueur.id).css('font-weight', 'bold');;
+		}else if(this.batiment != undefined){
+			$(canvas).attr('title', "Batiment: "+this.batiment.id).css('font-weight', 'bold');;
 		}else{
 			$(canvas).attr('title', this.x + " - " + this.y).css('font-weight', 'bold');;
 		}
