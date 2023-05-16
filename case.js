@@ -9,25 +9,17 @@ class Case{
 
     setTooltipContent(){
 		if (this.joueur != undefined && persos != undefined) {
-			console.log(this.findByMatricule());
-			var joueurTitle = "["+this.joueur.id+"]"+this.findByMatricule().label;
+			console.log(findByMatricule(this.joueur.id));
+			var joueurTitle = "["+this.joueur.id+"]"+findByMatricule(this.joueur.id).label;
 			$(canvas).attr('title', ).css('font-weight', 'bold');;
 		}else if(this.batiment != undefined){
 			$(canvas).attr('title', "Batiment: "+this.batiment.id).css('font-weight', 'bold');;
 		}else{
 			$(canvas).attr('title', this.x + " - " + this.y).css('font-weight', 'bold');;
 		}
-       
-		
     }
 	
-    findByMatricule() {
-	    console.log("search matricule");
-	    console.log(persos);
-	    var pers = JSON.parse(JSON.stringify(persos));
-	    console.log(pers);
-	    return persos.find(item => item.value === this.joueur.id);
-    }
+    
 
     draw(canvas, ctx){
         let me = this;
