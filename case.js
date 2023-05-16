@@ -9,8 +9,8 @@ class Case{
 
     setTooltipContent(){
 		if (this.joueur != undefined && persos != undefined) {
-			console.log(findByMatricule(this.joueur.id));
-			var joueurTitle = "["+this.joueur.id+"]"+findByMatricule(this.joueur.id).label;
+			console.log(findByMatricule());
+			var joueurTitle = "["+this.joueur.id+"]"+findByMatricule().label;
 			$(canvas).attr('title', ).css('font-weight', 'bold');;
 		}else if(this.batiment != undefined){
 			$(canvas).attr('title', "Batiment: "+this.batiment.id).css('font-weight', 'bold');;
@@ -21,9 +21,9 @@ class Case{
 		
     }
 	
-    findByMatricule(matricule) {
+    findByMatricule() {
       console.log("search matricule");
-      return persos.find(item => item.value === matricule);
+      return persos.find(item => item.value === this.joueur.id);
     }
 
     draw(canvas, ctx){
