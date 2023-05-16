@@ -7,9 +7,9 @@ class Case{
         this.setCouleur();
     }
 
-    setTooltipContent(){
-		console.log(findByMatricule(this.joueur.id));
+    setTooltipContent(){		
 		if (this.joueur != undefined && this.persos != undefined) {
+			console.log(findByMatricule(this.joueur.id));
 			var joueurTitle = "["+this.joueur.id+"]"+findByMatricule(this.joueur.id).label;
 			$(canvas).attr('title', ).css('font-weight', 'bold');;
 		}else if(this.batiment != undefined){
