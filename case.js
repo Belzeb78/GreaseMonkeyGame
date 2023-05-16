@@ -8,8 +8,7 @@ class Case{
     }
 
     setTooltipContent(){
-	    	console.log(persos);
-		if (this.joueur != undefined && this.persos != undefined) {
+		if (this.joueur != undefined && persos != undefined) {
 			console.log(findByMatricule(this.joueur.id));
 			var joueurTitle = "["+this.joueur.id+"]"+findByMatricule(this.joueur.id).label;
 			$(canvas).attr('title', ).css('font-weight', 'bold');;
